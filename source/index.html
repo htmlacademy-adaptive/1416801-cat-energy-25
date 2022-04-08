@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
-</head>
+  <link rel="stylesheet" href="css/style.css">
+ </head>
 <body>
   <header class="main-header">
     <div class="main-header__container">
@@ -19,13 +20,13 @@
       <nav class="main-header__navigation navigation">
         <ul class="navigation__list list">
           <li class="navigation__item">
-            <a href="" class="navigation__link navigation__link--active" aria-label="Перейти на главную страницу">Главная</a>
+            <a class="navigation__link navigation__link--active" href="#" aria-label="Перейти на главную страницу">Главная</a>
           </li>
           <li class="navigation__item">
-            <a href="" class="navigation__link" aria-label="Перейти на страницу каталога продукции">Каталог продукции</a>
+            <a class="navigation__link" href="catalog.html" aria-label="Перейти на страницу каталога продукции">Каталог продукции</a>
           </li>
           <li class="navigation__item">
-            <a href="" class="navigation__link" aria-label="Перейти на страницу подбора программы">Подбор программы</a>
+            <a class="navigation__link" href="form.html" aria-label="Перейти на страницу подбора программы">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -38,9 +39,9 @@
         <section class="program-selection__advertisement advertisement">
           <div class="advertisement__container">
             <h2 class="advertisement__title title">Функциональное питание для котов</h2>
-            <p class="advertisement__description description">Занялся собой? Займись котом!</p>
+            <p class="advertisement__description text">Занялся собой? Займись котом!</p>
             <img class="advertisement__image " src="img/program-selection/index-can-mobile.svg"
-              alt="Еда кет энерджи с курицей" width="280" height="270">
+            alt="Еда кет энерджи с курицей" width="280" height="270">
             <button class="advertisement__button button" type="button" aria-label="Подобрать программу питания для кота">подобрать программу</button>
           </div>
         </section>
@@ -61,8 +62,8 @@
               <li class="program__item">
                 <img class="program__image" src="img/program/cat-back-pro.svg" alt="Мускулистая багира" width="67"
                   height="50">
-                <h2 class="program__title">Набор массы</h2>
-                <p class="program__text">Заработать авторитет среди дворовых котов и даже
+                <h2 class="program__title title">Набор массы</h2>
+                <p class="program__text description">Заработать авторитет среди дворовых котов и даже
                   собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
                 <a class="program__link link-item" href="#">
                   <span class="link-item__button">Каталог PRO</span>
@@ -74,25 +75,25 @@
                 <h2 class="instruction__title">Как это работает</h2>
                 <ol class="instruction__list list">
                   <li class="instruction__item instruction__item--first">
-                    <p class="instruction__description">Функциональное питание
+                    <p class="instruction__description description">Функциональное питание
                       содержит только полезные
                       питательные вещества.</p>
                     <span class="instruction__count instruction__count--disabled">1</span>
                   </li>
                   <li class="instruction__item instruction__item--second">
-                    <p class="instruction__description">Выпускается в виде порошка,
+                    <p class="instruction__description description">Выпускается в виде порошка,
                       который нужно лишь залить
                       кипятком и готово.</p>
                     <span class="instruction__count instruction__count--disabled">2</span>
                   </li>
                   <li class="instruction__item instruction__item--third">
-                    <p class="instruction__description">Замените один-два приема
+                    <p class="instruction__description description">Замените один-два приема
                       обычной еды на наше
                       функциональное питание.</p>
                     <span class="instruction__count instruction__count--disabled">3</span>
                   </li>
                   <li class="instruction__item instruction__item--fourth">
-                    <p class="instruction__description">Уже через месяц наслаждайтесь
+                    <p class="instruction__description description">Уже через месяц наслаждайтесь
                       изменениями к лучшему вашего питомца!</p>
                     <span class="instruction__count instruction__count--disabled">4</span>
                   </li>
@@ -104,7 +105,7 @@
         <section class="page-main__example example">
           <div class="example__wrapper">
             <h2 class="example__title title">Живой пример</h2>
-            <p class="example__text text">Борис сбросил 5 кг за 2 месяца, просто заменив свой
+            <p class="example__text description">Борис сбросил 5 кг за 2 месяца, просто заменив свой
               обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
               При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
             <div class="example__option">
@@ -118,9 +119,9 @@
             <p class="example__expense">Затраты на питание: 15 000 РУБ.</p>
             <div class="example__slider slider">
               <div class="slider__images">
-                <img class="slider__image" src="img/slider/slide-mobile.jpg" width="280" height="232"
+                <img class="slider__image" src="img/slider/slide-mobile.svg" width="280" height="232"
                   alt="Кот, до использования программы функционального питания">
-                <img class="slider__image" src="img/slider/slide-mobile.jpg" width="280" height="232"
+                <img class="slider__image" src="img/slider/slide-mobile.svg" width="280" height="232"
                   alt="Кот, после использования программы функционального питания">
               </div>
               <div class="slider__inner">
@@ -143,9 +144,11 @@
             Санкт-Петербург</address>
         </aside>
         <aside class="page-main__map map">
-          <div class="map__marker">
-            <h2 class="visually-hidden">Карта</h2>
-            <img class="map__img" src="img/map/map.jpg" alt="Карта" width="320" height="362">
+          <div class="map__wrapper">
+            <div class="map__marker">
+              <h2 class="visually-hidden">Карта</h2>
+              <img class="map__img" src="img/map/map.jpg" alt="Карта" width="320" height="362">
+            </div>
           </div>
         </aside>
       </div>
