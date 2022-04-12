@@ -2,49 +2,54 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="main-header">
-    <div class="main-header__container">
-      <a class="main-header__logo-picture" href="">
-        <img src="img/main-header/logo-mobile.svg" alt="Логотип с котом суперменом" width="33" height="37">
-      </a>
-      <a class="main-header__logo-text logo-text" href="">
-        <img src="img/main-header/logo-text.svg" alt="Логотип" width="101" height="18">
-      </a>
-      <button class="main-header__toggle" type="button" aria-label="Открыть меню">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <nav class="main-header__navigation navigation">
-        <ul class="navigation__list list">
-          <li class="navigation__item">
-            <a class="navigation__link navigation__link--active" href="#" aria-label="Перейти на главную страницу">Главная</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="catalog.html" aria-label="Перейти на страницу каталога продукции">Каталог продукции</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="form.html" aria-label="Перейти на страницу подбора программы">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+    <div class="main-header__box">
+      <div class="main-header__container">
+        <div class="main-header__wrapper">
+          <a class="main-header__logo-picture" href="#">
+            <img src="img/main-header/logo-mobile.svg" alt="Логотип с котом суперменом" width="33" height="37">
+          </a>
+          <a class="main-header__logo-text logo-text" href="#">
+            <img src="img/main-header/logo-text.svg" alt="Логотип" width="101" height="18">
+          </a>
+          <button class="main-header__toggle" type="button" aria-label="Открыть меню">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <nav class="main-header__navigation navigation">
+          <ul class="navigation__list list">
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--active" href="#" aria-label="Перейти на главную страницу">Главная</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="catalog.html" aria-label="Перейти на страницу каталога продукции">Каталог продукции</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="form.html" aria-label="Перейти на страницу подбора программы">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <section class="main-header__advertisement advertisement advertisement--background">
+        <h1 class="visually-hidden">Программы питания для котов</h1>
+        <div class="advertisement__container">
+          <h2 class="advertisement__title title">Функциональное питание для котов</h2>
+          <p class="advertisement__description text">Занялся собой? Займись котом!</p>
+          <img class="advertisement__image " src="img/program-selection/index-can-mobile.svg"
+          alt="Еда кет энерджи с курицей" width="280" height="270">
+          <button class="advertisement__button button" type="button" aria-label="Подобрать программу питания для кота">подобрать программу</button>
+        </div>
+      </section>
     </div>
   </header>
   <main class="page-main">
     <div class="page-main__wrapper">
-      <h1 class="visually-hidden">Программы питания для котов</h1>
       <div class="page-main__program-selection program-selection">
-        <section class="program-selection__advertisement advertisement">
-          <div class="advertisement__container">
-            <h2 class="advertisement__title title">Функциональное питание для котов</h2>
-            <p class="advertisement__description text">Занялся собой? Займись котом!</p>
-            <img class="advertisement__image " src="img/program-selection/index-can-mobile.svg"
-            alt="Еда кет энерджи с курицей" width="280" height="270">
-            <button class="advertisement__button button" type="button" aria-label="Подобрать программу питания для кота">подобрать программу</button>
-          </div>
-        </section>
         <section class="program-selection__program program">
           <div class="program__container">
             <ul class="program__list list">
@@ -108,15 +113,20 @@
             <p class="example__text description">Борис сбросил 5 кг за 2 месяца, просто заменив свой
               обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
               При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-            <div class="example__option">
-              <span class="example__weight">5 КГ</span>
-              <span class="example__decline">снижение веса</span>
+            <div class="example__container">
+              <div class="example__option">
+                <span class="example__weight">5 КГ</span>
+                <span class="example__decline">снижение веса</span>
+              </div>
+              <div class="example__option">
+                <span class="example__time">60 ДНЕЙ</span>
+                <span class="example__spending">затрачено времени</span>
+              </div>
+              <div class="example__option">
+                <span class="example__expense">Затраты на питание:</span>
+                <span class="example__total"> 15 000 РУБ.</span>
+              </div>
             </div>
-            <div class="example__option">
-              <span class="example__time">60 ДНЕЙ</span>
-              <span class="example__spending">затрачено времени</span>
-            </div>
-            <p class="example__expense">Затраты на питание: 15 000 РУБ.</p>
             <div class="example__slider slider">
               <div class="slider__images">
                 <img class="slider__image" src="img/slider/slide-mobile.svg" width="280" height="232"
@@ -147,7 +157,7 @@
           <div class="map__wrapper">
             <div class="map__marker">
               <h2 class="visually-hidden">Карта</h2>
-              <img class="map__img" src="img/map/map.jpg" alt="Карта" width="320" height="362">
+              <img class="map__image" src="img/map/map.jpg" alt="Карта" width="320" height="362">
             </div>
           </div>
         </aside>

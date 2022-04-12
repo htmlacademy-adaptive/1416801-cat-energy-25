@@ -1,9 +1,86 @@
 .main-header {
   outline: 3px solid #e98fe4cc;
   outline-offset: -3px;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.main-header__container {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  padding: 0 20px;
+}
+
+.main-header__wrapper {
+  display: flex;
+  height: 66px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .main-header__navigation {
   outline: 3px solid #1dcccccc;
   outline-offset: -3px;
+}
+
+.main-header__box {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (min-width: @tablet-width) {
+  .main-header {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .main-header__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  .main-header__wrapper {
+    display: flex;
+    height: 78px; // взял общую высоту margin 42 + 36
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+  }
+
+  .main-header__navigation {
+    outline: 3px solid #1dcccccc;
+    outline-offset: -3px;
+    width: 440px;
+  }
+
+  .main-header__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header {
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  .main-header__container {
+    width: 1220px;
+    padding: 0 110px;
+  }
+
+  .main-header__box {
+    background: url("../img/main-header/background-desktop.jpg") no-repeat right top;
+  }
+
+  .main-header__navigation {
+    outline: 3px solid #1dcccccc;
+    outline-offset: -3px;
+    width: 478px;
+  }
 }

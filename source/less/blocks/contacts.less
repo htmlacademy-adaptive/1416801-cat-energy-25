@@ -1,3 +1,8 @@
+.contacts {
+  display: flex;
+  justify-content: space-between;
+}
+
 .contacts__text {
   font-size: 16px;
   line-height: 20px;
@@ -11,4 +16,14 @@
   color: #444444;
   font-size: 14px;
   line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__text {
+    width: 172px;
+  }
+
+  .contacts__address {
+    width: 159px;
+  }
 }
