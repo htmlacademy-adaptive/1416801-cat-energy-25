@@ -1,6 +1,8 @@
 .page-main {
   outline: 3px solid #a38fe9cc;
   outline-offset: -3px;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .page-main__example {
@@ -12,4 +14,22 @@
   outline: 3px solid #362964cc;
   outline-offset: -3px;
   padding: 26px 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .page-main__contacts {
+    padding: 56px 70px 56px 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main {
+    width: 1440px;
+    margin: 0 auto;
+  }
 }

@@ -1,6 +1,9 @@
-.navigation {
-  display: block;
-  color: #008000;
+.navigation__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 66px;
 }
 
 .navigation__link {
@@ -13,7 +16,20 @@
   color: #000000;
 }
 
-.navigation__item {
-  padding: 22px 70px 24px 70px;
+// .navigation__item {
+//   display: block;
+//   padding: 22px 50px 24px 50px;
+// }
+
+@media (min-width: @tablet-width) {
+  .navigation__list {
+    display: flex;
+    flex-direction: row;
+  }
 }
-//
+
+@media (min-width: @desktop-width) {
+  .navigation__link {
+    color: #ffffff;
+  }
+}

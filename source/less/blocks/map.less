@@ -1,3 +1,20 @@
 .map__wrapper {
   background-color: @background-color;
 }
+
+@media (min-width: @tablet-width) {
+  .map__image {
+    display: none;
+  }
+
+  .map__wrapper {
+    background: url("../img/map/map-tablet.jpg") no-repeat;
+    height: 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map__wrapper {
+    background: url("../img/map/map-desktop.jpg") no-repeat;
+  }
+}

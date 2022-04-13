@@ -28,3 +28,23 @@
   font-size: 14px;
   line-height: 20px;
 }
+
+@media (min-width: @tablet-width) {
+  .example__wrapper {
+    min-width: 768;
+    padding: 25px 30px 40px 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .example__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .example__option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

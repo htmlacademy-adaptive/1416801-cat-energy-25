@@ -14,3 +14,34 @@
 .instruction__item {
   padding-left: 80px;
 }
+
+@media (min-width: @tablet-width) {
+  .instruction {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .instruction__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .instruction__item {
+    padding: 0;
+    width: 354px;
+  }
+
+  .instruction__description {
+    margin-bottom: 200px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .instruction__list {
+    justify-content: space-between;
+  }
+
+  .instruction__item {
+    width: 250px;
+  }
+}
