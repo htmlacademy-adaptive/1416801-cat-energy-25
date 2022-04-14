@@ -8,6 +8,32 @@
   color: #000000;
 }
 
+.extra__list {
+  display: flex;
+  flex-direction: column;
+}
+
 .extra__item {
   padding: 13px 13px 13px 0;
+}
+
+@media (min-width: @tablet-width) {
+  .extra__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .extra__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 124px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 105px;
+  }
 }
