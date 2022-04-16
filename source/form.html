@@ -9,29 +9,33 @@
 </head>
 <body>
   <header class="main-header">
-    <div class="main-header__container">
-      <a class="main-header__logo-picture" href="#">
-        <img src="img/main-header/logo-mobile.svg" alt="Логотип с котом суперменом" width="33" height="37">
-      </a>
-      <a class="main-header__logo-text logo-text" href="#">
-        <img src="img/main-header/logo-text.svg" alt="Логотип" width="101" height="18">
-      </a>
-      <button class="main-header__toggle" type="button" aria-label="Открыть меню">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <nav class="main-header__navigation navigation">
-        <ul class="navigation__list list">
-          <li class="navigation__item">
-            <a class="navigation__link" href="index.html" aria-label="Перейти на главную страницу">Главная</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="catalog.html" aria-label="Перейти на страницу каталога продукции">Каталог продукции</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link navigation__link--active" href="#" aria-label="Перейти на страницу подбора программы">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+    <div class="main-header__box">
+      <div class="main-header__container">
+        <div class="main-header__wrapper">
+          <a class="main-header__logo-picture" href="#">
+            <img src="img/main-header/logo-mobile.svg" alt="Логотип с котом суперменом" width="33" height="37">
+          </a>
+          <a class="main-header__logo-text logo-text" href="#">
+            <img src="img/main-header/logo-text.svg" alt="Логотип" width="101" height="18">
+          </a>
+          <button class="main-header__toggle" type="button" aria-label="Открыть меню">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <nav class="main-header__navigation navigation">
+          <ul class="navigation__list list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="index.html" aria-label="Перейти на главную страницу">Главная</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="catalog.html" aria-label="Перейти на страницу каталога продукции">Каталог продукции</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--active" href="#" aria-label="Перейти на страницу подбора программы">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
   <main class="form-main">
@@ -150,16 +154,22 @@
             </div>
           </div>
         </form>
-        <aside class="form-main__contacts contacts">
-          <h2 class="visually-hidden">Контактная информация</h2>
-          <p class="contacts__text text">приглашаем к сотрудничеству дилеров!</P>
-          <address class="contacts__address address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-        </aside>
-        <aside class="form-main__map map">
-          <div class="map__wrapper">
-            <div class="map__marker">
-              <h2 class="visually-hidden">Карта</h2>
-              <img class="map__image" src="img/map/map.jpg" alt="Карта" width="320" height="362">
+        <aside class="form-main__information information">
+          <div class="information__about about">
+            <div class="about__contacts contacts">
+              <h2 class="visually-hidden">Контактная информация</h2>
+              <p class="contacts__text text">приглашаем к сотрудничеству дилеров!</P>
+              <address class="contacts__address address">ул. Большая Конюшенная, д. 19/8 <br class="contacts__br">
+                <br class="contacts__br">
+                Санкт-Петербург</address>
+            </div>
+            <div class="about__map map">
+              <div class="map__wrapper">
+                <div class="map__marker">
+                  <h2 class="visually-hidden">Карта</h2>
+                  <img class="map__image" src="img/map/map.jpg" alt="Карта" width="320" height="362">
+                </div>
+              </div>
             </div>
           </div>
         </aside>

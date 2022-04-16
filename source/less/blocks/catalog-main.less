@@ -24,27 +24,42 @@
   outline-offset: -3px;
 }
 
-.catalog-main__additional-goods {
-  outline: 3px solid #1b0f9bcc;
+.catalog-main__offer {
+  outline: 3px solid #402ffacc;
   outline-offset: -3px;
 }
 
-.catalog-main__gift {
-  background: url("../img/gift/gift-backgroud.jpg") no-repeat;
-  background-color: rgba(104, 183, 56, 0.85);
-  min-width: 280px;
-  min-height: 290px;
-  outline: 3px solid #b3b021cc;
-  outline-offset: -3px;
+@media (min-width: @tablet-width) {
+  .catalog-main {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .catalog-main__wrapper {
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  .catalog-main__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
-.catalog-main__contacts {
-  outline: 3px solid #e98e18cc;
-  outline-offset: -3px;
-  padding: 26px 20px;
-}
+@media (min-width: @desktop-width) {
+  .catalog-main {
+    width: 1440px;
+    margin: 0 auto;
+  }
 
-.catalog-main__map {
-  outline: 3px solid #1c6d8dcc;
-  outline-offset: -3px;
+  .catalog-main__wrapper {
+    width: 1220px;
+    padding: 0 110px;
+  }
+
+  .catalog-main__offer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 }
