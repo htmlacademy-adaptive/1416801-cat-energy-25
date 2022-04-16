@@ -2,8 +2,33 @@
   font-size: 24px;
   line-height: 24px;
   .font-style-title();
+  margin: 0;
+  padding-top: 25px;
+  margin-bottom: 49px;
 }
 
-.additional-goods__item {
+.additional-goods__item:not(:last-child) {
   margin-bottom: 31px;
+}
+
+.additional-goods__container {
+  padding: 13px 0 19px 0;
+}
+
+@media (min-width: @tablet-width) {
+  .additional-goods__title {
+    font-size: 36px;
+    line-height: 36px;
+    padding-left: 37px;
+  }
+
+  .additional-goods__container {
+    padding: 26px 38px 28px 38px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additional-goods__container {
+    padding: 15px 0 15px 0;
+  }
 }

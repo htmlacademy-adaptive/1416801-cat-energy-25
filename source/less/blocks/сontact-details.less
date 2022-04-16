@@ -1,3 +1,8 @@
+.сontact-details__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .сontact-details__title {
   .font-style-title();
   font-size: 24px;
@@ -11,4 +16,25 @@
   text-transform: uppercase;
   padding: 13px 15px 15px 15px;
   margin-bottom: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .сontact-details__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .сontact-details__input {
+    font-size: 20px;
+    line-height: 30px;
+    min-width: 450px;
+    min-height: 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .сontact-details__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

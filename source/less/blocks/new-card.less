@@ -3,6 +3,7 @@
   line-height: 20px;
   color: #111111;
   text-align: center;
+  margin: 0;
 }
 
 .new-card__banner {
@@ -29,4 +30,51 @@
 .new-card__button--show-all {
   background-color: @background-color;
   color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+  .new-card {
+    background-color: #ffffff;
+    border: 2px solid #f2f2f2;
+    box-sizing: border-box;
+  }
+
+  .new-card__text {
+    padding: 161px 94px 0 92px;
+    margin-bottom: 23px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .new-card__banner {
+    padding-left: 76px;
+    padding-right: 77px;
+    margin-bottom: 87px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .new-card__button {
+    min-width: 249px;
+    font-size: 16px;
+    line-height: 0;
+    padding: 20px 79px 20px 79px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .new-card__text {
+    padding: 161px 53px 0 54px;
+    margin-bottom: 23px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .new-card__banner {
+    padding-left: 39px;
+    padding-right: 39px;
+    margin-bottom: 87px;
+    font-size: 16px;
+    line-height: 18px;
+  }
 }

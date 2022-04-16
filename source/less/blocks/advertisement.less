@@ -4,9 +4,6 @@
   outline-offset: -3px;
 }
 
-//Фон, если картинка не загрузится
-// получилось сделать только таким образом, вставить перед изображением,
-// и на всю длину контейнера
 .advertisement {
   color: #ffffff;
   background-color: #68b738;
@@ -98,7 +95,7 @@
 @media (min-width: @desktop-width) {
   .advertisement__container {
     position: relative;
-    // min-height: 810px;
+
     &::before {
       position: absolute;
       background-image: url("../img/advertisement/index-can-desktop.svg");
