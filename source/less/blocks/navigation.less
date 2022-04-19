@@ -3,7 +3,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 66px;
+}
+
+.navigation__item {
+  padding: 22px 0 24px 0;
+  border-top: 1px solid @border-menu;
+  width: 100%;
 }
 
 .navigation__link {
@@ -20,14 +25,23 @@
   .navigation__list {
     display: flex;
     flex-direction: row;
+    height: 66px;
+  }
+
+  .navigation__item {
+    padding: 0;
+    border: none;
+    width: auto;
+  }
+
+  .navigation__link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .navigation__link {
-    color: #111111;
-  }
-
   .navigation__link--color-white {
     color: @main-color;
   }

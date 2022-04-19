@@ -3,6 +3,7 @@
   line-height: 40px;
   .font-style-title();
   margin: 0;
+  margin-bottom: 42px;
 }
 
 .instruction__description {
@@ -12,7 +13,84 @@
 }
 
 .instruction__item {
+  position: relative;
   padding-left: 80px;
+  margin-bottom: 26px;
+
+  &::before {
+    position: absolute;
+    background-color: @button-bg-color;
+    width: 60px;
+    height: 60px;
+    left: 0;
+    top: 0;
+    content: "";
+  }
+}
+
+.instruction__item--first {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    background-image: url("../img/instruction/icon-leaf.svg");
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    left: 15px;
+    top: 14px;
+    content: "";
+  }
+}
+
+.instruction__item--second {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    background-image: url("../img/instruction/icon-tub.svg");
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    content: "";
+    left: 15px;
+    top: 13px;
+  }
+}
+
+.instruction__item--third {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    background-image: url("../img/instruction/icon-eat.svg");
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    content: "";
+    left: 18px;
+    top: 15px;
+  }
+}
+
+.instruction__item--fourth {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    background-image: url("../img/instruction/icon-alarm.svg");
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    content: "";
+    left: 14px;
+    top: 13px;
+  }
+}
+
+
+.instruction__count--disabled {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
