@@ -7,7 +7,45 @@
 .footer__container {
   // outline: 3px solid #201f68cc;
   // outline-offset: -3px;
-  padding: 39px 20px 22px 20px;
+  padding: 35px 20px 22px 20px;
+}
+
+.footer__image {
+  padding: 0 76px;
+}
+
+.footer__logo-academy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  margin-bottom: 54px;
+}
+
+.footer__socials {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    min-width: 280px;
+    height: 1px;
+    left: 0;
+    top: 24px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    min-width: 280px;
+    height: 1px;
+    left: 0;
+    top: 87px;
+    border-bottom: 1px solid #d9d9d9;
+  }
 }
 
 @media (min-width: @tablet-width) {

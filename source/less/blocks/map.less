@@ -2,6 +2,20 @@
   background-color: @primary-bg-color;
 }
 
+.map__marker {
+  position: relative;
+}
+
+.map__point {
+  position: absolute;
+  width: 57px;
+  height: 53px;
+  background-image: url("../img/map/marker.png");
+  background-repeat: no-repeat;
+  left: 134px;
+  top: 139px;
+}
+
 @media (min-width: @tablet-width) {
   .map__image {
     display: none;
@@ -10,6 +24,14 @@
   .map__wrapper {
     background: url("../img/map/map-tablet.jpg") no-repeat;
     height: 400px;
+  }
+
+  .map__point {
+    width: 113px;
+    height: 106px;
+    background-image: url("../img/map/marker-tablet.png");
+    left: 334px;
+    top: 146px;
   }
 }
 
