@@ -63,4 +63,17 @@
   .navigation__link--color-white {
     color: @main-color;
   }
+
+  .navigation__link {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .navigation__link--active {
+    &::before {
+      border-color: @main-color;
+      bottom: -8px;
+      width: auto;
+    }
+  }
 }

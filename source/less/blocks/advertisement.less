@@ -112,16 +112,30 @@
 @media (min-width: @desktop-width) {
   .advertisement__container {
     position: relative;
+    padding: 122px 110px 0 110px;
+    min-height: 470px;
 
     &::before {
-      position: absolute;
       background-image: url("../img/advertisement/index-can-desktop.svg");
-      background-repeat: no-repeat;
-      content: "";
       height: 499px;
       width: 552px;
-      top: 263px;
-      left: 550px;
+      top: 39px;
+      left: 558px;
     }
+  }
+
+  .advertisement__title {
+    padding-left: 81px;
+    padding-right: 578px;
+    margin-bottom: 39px;
+  }
+
+  .advertisement__description {
+    padding-left: 80px;
+    margin-bottom: 52px;
+  }
+
+  .advertisement__button {
+    margin-left: 80px;
   }
 }
