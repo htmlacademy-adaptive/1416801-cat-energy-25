@@ -1,12 +1,10 @@
 .program-selection__program {
   padding: 0 20px;
-  outline: 3px solid #40abe9cc;
-  outline-offset: -3px;
 }
 
 .program-selection__instruction {
-  outline: 3px solid #e9a540cc;
-  outline-offset: -3px;
+  padding-top: 20px;
+  padding-bottom: 41px;
 }
 
 @media (min-width: @tablet-width) {
@@ -14,11 +12,21 @@
     width: 708px;
     padding: 0 30px;
   }
+
+  .program-selection__instruction {
+    padding-top: 43px;
+    padding-bottom: 11px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .program-selection__program {
     width: 1220px;
     padding: 0 110px;
+  }
+
+  .program-selection__instruction {
+    padding-top: 72px;
+    padding-bottom: 0;
   }
 }

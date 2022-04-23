@@ -1,19 +1,73 @@
 .example__wrapper {
   min-width: 280px;
-  background-color: #eaeaea;
-  padding: 25px 20px 40px 20px;
+  background-color: @secondary-bg-color;
+  padding: 24px 20px 40px 20px;
 }
 
 .example__title {
   font-size: 36px;
   line-height: 40px;
   .font-style-title();
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 .example__text {
   font-size: 14px;
   line-height: 18px;
   .font-style-title();
+  margin: 0;
+  margin-bottom: 33px;
+}
+
+.example__container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.example__inner {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.example__option {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 124px;
+
+  &::before {
+    position: absolute;
+    width: 124px;
+    height: 56px;
+    content: "";
+    background: url("../img/example/border-mobile.png") no-repeat;
+    z-index: 2;
+    top: -14px;
+    left: 0;
+  }
+
+  &--position {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.example__cost {
+  display: flex;
+}
+
+.example__weight {
+  margin-bottom: 10px;
+}
+
+.example__time {
+  margin-bottom: 10px;
 }
 
 .example__decline,
@@ -22,29 +76,169 @@
   line-height: 100%;
   .font-style();
   .font-style-title();
+  padding: 0 30px;
+  text-align: center;
 }
 
-.example__expense {
+.example__expense,
+.example__total {
   font-size: 14px;
   line-height: 20px;
+}
+
+.example__slider {
+  overflow: hidden;
+}
+
+.example__br {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
   .example__wrapper {
     min-width: 768;
-    padding: 25px 30px 40px 30px;
+    padding: 0;
     display: flex;
     flex-direction: column;
+    background-color: @secondary-bg-color;
   }
 
   .example__container {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    margin: 0;
+  }
+
+  .example__inner {
+    margin: 0;
   }
 
   .example__option {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 162px;
+    margin-right: 42px;
+
+    &::before {
+      width: 162px;
+      height: 72px;
+      background: url("../img/example/border-tablet.png") no-repeat;
+      top: -14px;
+      left: 0;
+    }
+
+    &--position {
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: start;
+    }
+  }
+
+  .example__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0;
+    padding: 43px 30px 66px 30px;
+    background-color: @main-color;
+  }
+
+  .example__box {
+    padding: 0 30px 252px 30px;
+    background-color: @main-color;
+  }
+
+  .example__text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 65px;
+  }
+
+  .example__br {
+    display: block;
+  }
+
+  .example__decline,
+  .example__spending {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 0 10px;
+  }
+
+  .example__total,
+  .example__expense {
+    font-size: 20px;
+  }
+
+  .example__expense {
+    margin-bottom: 5px;
+  }
+
+  .example__slider {
+    padding-top: 101px;
+    padding-bottom: 55px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .example__box {
+    width: 36%;
+    padding: 71px 61px 70px 110px;
+    background-color: @primary-bg-color;
+  }
+
+  .example__title {
+    width: 100%;
+    padding: 42px 110px 76px 110px;
+  }
+
+  .example__text {
+    padding-right: 84px;
+    margin-bottom: 84px;
+  }
+
+  .example__br {
+    display: none;
+  }
+
+  .example__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 408px;
+    margin-bottom: 0;
+  }
+
+  .example__option {
+    &--position {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .example__cost {
+    display: block;
+  }
+
+  .example__inner {
+    margin-bottom: 56px;
+  }
+
+  .example__expense {
+    margin-right: 62px;
+    margin-bottom: 0;
+  }
+
+  .example__slider {
+    padding: 0;
+    width: 52%;
+    background-color: @primary-bg-color;
   }
 }

@@ -1,19 +1,19 @@
 .contacts {
   display: flex;
-  justify-content: space-between;
 }
 
 .contacts__text {
   font-size: 16px;
   line-height: 20px;
-  color: #111111;
+  color: @contacts-color;
   margin: 0;
+  margin-right: 18px;
 }
 
 .contacts__address {
   .font-style();
   .font-style-title();
-  color: #444444;
+  color: @second-text-color;
   font-size: 14px;
   line-height: 20px;
 }
@@ -23,6 +23,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .contacts {
+    justify-content: space-between;
+  }
+
   .contacts__text {
     width: 172px;
     font-size: 20px;
@@ -33,9 +37,16 @@
     width: 159px;
     font-size: 16px;
     line-height: 20px;
+    text-align: end;
   }
 
   .contacts__br {
     display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__address {
+    text-align: start;
   }
 }

@@ -1,27 +1,97 @@
 .main-header {
-  outline: 3px solid #e98fe4cc;
-  outline-offset: -3px;
   width: 320px;
   margin: 0 auto;
 }
 
 .main-header__container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  width: 280px;
-  padding: 0 20px;
+  width: 320px;
 }
 
 .main-header__wrapper {
+  height: 65px;
+  width: 280px;
   display: flex;
-  height: 66px;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: space-between;
+  padding: 13px 20px 13px 20px;
+  box-sizing: border-box;
+}
+
+.main-header__toggle {
+  position: absolute;
+  top: -3px;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 64px;
+  height: 65px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 .main-header__navigation {
-  outline: 3px solid #1dcccccc;
-  outline-offset: -3px;
+  position: absolute;
+  background-color: @main-color;
+  width: 100%;
+  top: 65px;
+  display: none;
+}
+
+.main-header__toggle--closed::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 20px;
+  width: 24px;
+  height: 1.5px;
+  background-color: @main-text-color;
+  box-shadow: 0 8px 0 0 @main-text-color, 0 16px 0 0 @main-text-color;
+}
+
+.main-header__toggle--opened {
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 25px;
+    height: 2px;
+    background-color: @main-text-color;
+    box-shadow: none;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-header--closed {
+  display: none;
+}
+
+.main-header--opened {
+  display: block;
+}
+
+.main-header--nojs {
+  position: static;
+  background-color: @main-color;
+  width: 100%;
+  top: 65px;
+  display: block;
+}
+
+.main-header__toggle--nojs {
+  display: none;
 }
 
 .main-header__box {
@@ -29,6 +99,9 @@
   flex-direction: column;
 }
 
+.main-header__logo-picture {
+  margin-right: 58px;
+}
 
 @media (min-width: @tablet-width) {
   .main-header {
@@ -46,16 +119,22 @@
 
   .main-header__wrapper {
     display: flex;
-    height: 78px; // взял общую высоту margin 42 + 36
+    height: 78px;
     align-items: center;
     justify-content: space-between;
     width: 180px;
   }
 
   .main-header__navigation {
-    outline: 3px solid #1dcccccc;
-    outline-offset: -3px;
+    position: relative;
+    top: 0;
     width: 440px;
+    background-color: inherit;
+    padding-top: 36px;
+  }
+
+  .main-header--closed {
+    display: block;
   }
 
   .main-header__toggle {
@@ -79,8 +158,7 @@
   }
 
   .main-header__navigation {
-    outline: 3px solid #1dcccccc;
-    outline-offset: -3px;
     width: 478px;
+    padding-top: 66px;
   }
 }
