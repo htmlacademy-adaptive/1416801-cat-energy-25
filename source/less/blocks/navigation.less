@@ -33,6 +33,7 @@
     padding: 0;
     border: none;
     width: auto;
+    margin-right: 2px;
   }
 
   .navigation__link {
@@ -52,7 +53,7 @@
       border-bottom: 2px solid @button-bg-color;
       left: 0;
       right: 0;
-      bottom: -10px;
+      bottom: -8px;
     }
   }
 }
@@ -68,10 +69,17 @@
   }
 
   .navigation__link--active {
+    position: relative;
+
     &::before {
-      border-color: @main-color;
-      bottom: -8px;
+      position: absolute;
+      content: "";
       width: auto;
+      height: 2px;
+      border-bottom: 2px solid @button-bg-color;
+      left: 0;
+      right: 0;
+      bottom: -9px;
     }
   }
 }

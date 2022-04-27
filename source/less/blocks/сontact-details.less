@@ -1,12 +1,23 @@
 .сontact-details__wrapper {
   display: flex;
   flex-direction: column;
+  padding: 0;
+}
+
+.contact-details__box {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-right: 79px;
 }
 
 .сontact-details__title {
   .font-style-title();
   font-size: 24px;
   line-height: 26px;
+  margin: 0;
+  margin-bottom: 34px;
+  background-color: @main-color;
+  display: inline-block;
 }
 
 .сontact-details__input {
@@ -14,14 +25,43 @@
   color: @second-text-color;
   font-family: inherit;
   text-transform: uppercase;
-  padding: 13px 15px 15px 15px;
+  padding: 13px 19px 11px 13px;
   margin-bottom: 14px;
+  margin-left: 9px;
+  border: 1px solid @radio-button-color;
+}
+
+.сontact-details__email,
+.сontact-details__phone {
+  position: relative;
+}
+
+.contact-details__input {
+  &--medium {
+    width: 184px;
+  }
+
+  &--small {
+    width: 167px;
+  }
+}
+
+.сontact-details__image {
+  position: absolute;
+  width: 20px;
+  height: 21px;
+  top: 13px;
+  left: 247px;
 }
 
 @media (min-width: @tablet-width) {
   .сontact-details__title {
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 75px;
+    padding-right: 39px;
+    padding-left: 38px;
+    margin-left: -39px;
   }
 
   .сontact-details__input {
@@ -29,6 +69,26 @@
     line-height: 30px;
     min-width: 450px;
     min-height: 52px;
+    margin-bottom: 20px;
+    margin-left: 14px;
+    padding: 10px 19px 10px 22px;
+    box-sizing: border-box;
+  }
+
+  .сontact-details__image {
+    top: 15px;
+    left: 594px;
+  }
+
+  .contact-details__input {
+    &--medium {
+      width: 551px;
+    }
+
+    &--small {
+      width: 530px;
+      padding-left: 15px;
+    }
   }
 }
 
@@ -36,5 +96,27 @@
   .сontact-details__wrapper {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .сontact-details__title {
+    margin-bottom: 75px;
+  }
+
+  .contact-details__input {
+    &--medium {
+      width: 486px;
+      margin-left: 19px;
+      padding-left: 17px;
+    }
+
+    &--small {
+      width: 472px;
+      padding-left: 15px;
+    }
+  }
+
+  .сontact-details__image {
+    top: 15px;
+    left: 533px;
   }
 }

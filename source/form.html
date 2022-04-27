@@ -62,23 +62,28 @@
             </div>
             <div class="form__switch switch">
               <label class="switch__text text-form" for="weight-loss">
-                <input class="switch__input switch__input--checked" type="radio" id="weight-loss" name="weight-loss" aria-label="Выбрать программу по похудению">
+                <input class="visually-hidden switch__input" type="radio" id="weight-loss" name="program" aria-label="Выбрать программу по похудению" checked>
+                <span class="switch__control-mark"></span>
                 <span class="switch__control-label">Похудение</span>
               </label>
               <label class="switch__text text-form" for="mass-gain">
-                <input class="switch__input" type="radio" id="mass-gain" name="mass-gain" aria-label="Выбрать программу по набору массы">
+                <input class="visually-hidden switch__input" type="radio" id="mass-gain" name="program" aria-label="Выбрать программу по набору массы">
+                <span class="switch__control-mark"></span>
                 <span class="switch__control-label">Набор массы</span>
               </label>
-              <label class="switch__text text-form" for="advice">
-                <input class="switch__input" type="radio" id="advice" name="advice" aria-label="Выбрать этот пункт, если нужен совет по питанию для кота">
+              <label class="switch__text text-form" for="advice" tabindex="0">
+                <input class="visually-hidden switch__input" type="radio" id="advice" name="program" aria-label="Выбрать этот пункт, если нужен совет по питанию для кота">
+                <span class="switch__control-mark"></span>
                 <span class="switch__control-label">Не знаю (Нужен ваш совет)</span>
               </label>
             </div>
             <section class="form__сontact-details сontact-details">
-              <h2 class="сontact-details__title">Контактные данные (владельца кота)</h2>
+              <div class="contact-details__box">
+                <h2 class="сontact-details__title">Контактные данные (владельца кота)</h2>
+              </div>
               <div class="сontact-details__wrapper">
                 <label class="сontact-details__email text-form" for="email">E-mail:<sup>*</sup>
-                  <input class="сontact-details__input" type="email" id="email" name="email"
+                  <input class="сontact-details__input contact-details__input--medium" type="email" id="email" name="email"
                     placeholder="kuklachev@gmail.com" aria-label="Указать Email">
                   <svg class="сontact-details__image" aria-hidden="true" focusable="false" width="20" height="15"
                     viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,7 +97,7 @@
                   <span class="visually-hidden">Email</span>
                 </label>
                 <label class="сontact-details__phone text-form" for="phone">Телефон:<sup>*</sup>
-                  <input class="сontact-details__input" type="tel" id="phone" name="phone"
+                  <input class="сontact-details__input contact-details__input--small" type="tel" id="phone" name="phone"
                     placeholder="8 (960) 900-60-90" required aria-label="Ввести номер телефона">
                   <svg class="сontact-details__image" aria-hidden="true" focusable="false" width="20" height="21"
                     viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,34 +120,42 @@
               </div>
             </section>
             <div class="form__comments comments">
-              <h2 class="comments__title">Комментарий</h2>
+              <div class="comments__box">
+                <h2 class="comments__title">Комментарий</h2>
+              </div>
               <textarea class="comments__field" name="comment" id="comment-field"
                 aria-label="Рассказать обо всех повадках кота">Расскажите обо всех повадках кота</textarea>
             </div>
             <section class="form__extra extra">
-              <h2 class="extra__title">Дополнительно</h2>
+              <div class="extra__box">
+                <h2 class="extra__title">Дополнительно</h2>
+              </div>
               <ul class="extra__list list">
                 <li class="extra__item">
                   <label class="extra__control text-form" for="sweetener">
-                    <input class="extra__input extra__input--checked" type="checkbox" id="sweetener" name="sweetener" aria-label="Указать сахарозаменитель">
+                    <input class="visually-hidden extra__input extra__input--checked" type="checkbox" id="sweetener" name="sweetener" aria-label="Указать сахарозаменитель" checked>
+                    <span class="extra__control-mark"></span>
                     <span class="extra__control-label">Cахарозаменитель</span>
                   </label>
                 </li>
                 <li class="extra__item">
                   <label class="extra__control text-form" for="water">
-                    <input class="extra__input" type="checkbox" id="water" name="water" aria-label="Указать питьевую воду">
+                    <input class="visually-hidden extra__input" type="checkbox" id="water" name="water" aria-label="Указать питьевую воду">
+                    <span class="extra__control-mark"></span>
                     <span class="extra__control-label">Питьевая вода</span>
                   </label>
                 </li>
                 <li class="extra__item">
                   <label class="extra__control text-form" for="milk">
-                    <input class="extra__input" type="checkbox" id="milk" name="milk" aria-label="Указать молоко">
+                    <input class="visually-hidden extra__input" type="checkbox" id="milk" name="milk" aria-label="Указать молоко">
+                    <span class="extra__control-mark"></span>
                     <span class="extra__control-label">Молоко</span>
                   </label>
                 </li>
                 <li class="extra__item">
                   <label class="extra__control text-form" for="vitamins">
-                    <input class="extra__input" type="checkbox" id="vitamins" name="vitamins" aria-label="Указать витамины">
+                    <input class=" visually-hidden extra__input" type="checkbox" id="vitamins" name="vitamins" aria-label="Указать витамины">
+                    <span class="extra__control-mark"></span>
                     <span class="extra__control-label">Витамины</span>
                   </label>
                 </li>
@@ -158,7 +171,7 @@
           <div class="information__about about">
             <div class="about__contacts contacts">
               <h2 class="visually-hidden">Контактная информация</h2>
-              <p class="contacts__text text">приглашаем к сотрудничеству дилеров!</P>
+              <p class="contacts__text text">приглашаем к&nbsp;сотрудничеству дилеров!</P>
               <address class="contacts__address address">ул. Большая Конюшенная, д. 19/8 <br class="contacts__br">
                 <br class="contacts__br">
                 Санкт-Петербург</address>
@@ -168,6 +181,7 @@
                 <div class="map__marker">
                   <h2 class="visually-hidden">Карта</h2>
                   <img class="map__image" src="img/map/map.jpg" alt="Карта" width="320" height="362">
+                  <span class="map__point"></span>
                 </div>
               </div>
             </div>
@@ -179,29 +193,37 @@
   <footer class="footer">
     <div class="footer__container">
       <a class="footer__logo logo-text" href="#">
-        <img class="footer__image" src="img/footer/footer-logo.svg" alt="Логотип Кэт Энерджи" width="128" height="24">
+        <img class="footer__image" src="img/footer/footer-logo-2.svg" alt="Логотип Кэт Энерджи" width="128" height="24">
       </a>
       <div class="footer__socials socials">
         <ul class="socials__list list">
           <li class="socials__item">
-            <a class="socials__link socials__link--vkontakte" href="#" aria-label="Перейти по ссылке на сайт в Контакте">В контакте</a>
+            <a class="socials__link socials__link--vkontakte" href="#"
+              aria-label="Перейти по ссылке на сайт в Контакте">
+              <span class="visually-hidden">В контакте</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--youtube" href="#" aria-label="Перейти по ссылке на сайт Ютюб">Ютюб</a>
+            <a class="socials__link socials__link--youtube" href="#"
+              aria-label="Перейти по ссылке на сайт Ютюб">
+              <span class="visually-hidden">Ютюб</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--telegram" href="#" aria-label="Перейти по ссылке на сайт в Телеграм">Телеграмм</a>
+            <a class="socials__link socials__link--telegram" href="#"
+              aria-label="Перейти по ссылке на сайт в Телеграм">
+              <span class="visually-hidden">Телеграмм</span>
+            </a>
           </li>
         </ul>
       </div>
       <div class="footer__logo-academy logo-academy">
-        <a class="logo-academy__link logo-academy__link--htmlacademy"
-          href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти по ссылке на сайт HTML Academy">HTML Academy</a>
-        <a class="logo-academy__link logo-academy__link--htmlacademy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти по ссылке на сайт HTML Academy">
-          <svg aria-hidden="true" focusable="false" width="27" height="34" viewBox="0 0 60 60"
-            xmlns="http://www.w3.org/2000/svg">
-            <path fill="#2E368F"
-              d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" />
+        <a class="logo-academy__link logo-academy__link--htmlacademy" href="https://htmlacademy.ru/intensive/adaptive"
+          aria-label="Перейти по ссылке на сайт HTML Academy">HTML Academy</a>
+        <a class="logo-academy__link logo-academy__link--htmlacademy" href="https://htmlacademy.ru/intensive/adaptive"
+          aria-label="Перейти по ссылке на сайт HTML Academy">
+          <svg aria-hidden="true" focusable="false" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#666666"/>
           </svg>
           <span class="visually-hidden">HTML Academy</span>
         </a>

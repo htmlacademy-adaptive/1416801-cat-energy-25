@@ -4,10 +4,74 @@
 }
 
 .switch__text {
+  position: relative;
   margin-bottom: 13px;
   display: block;
 }
 
+.switch__text:last-child {
+  margin-bottom: 0;
+}
+
 .switch__control-label {
   color: @card-title-color;
+  padding-left: 11px;
+}
+
+.switch__control-mark {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid @radio-button-color;
+  box-sizing: border-box;
+  background-color: @main-color;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: @button-bg-color;
+    display: none;
+  }
+}
+
+.switch__input:checked + .switch__control-mark::before {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .switch__control-mark {
+    width: 40px;
+    height: 40px;
+
+    &::before {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .switch__control-label {
+    padding-left: 15px;
+  }
+
+  .switch__text {
+    padding-top: 2px;
+    margin-bottom: 11px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .switch__text {
+    padding-top: 26px;
+    padding-left: 28px;
+    margin-bottom: -13px;
+  }
 }
