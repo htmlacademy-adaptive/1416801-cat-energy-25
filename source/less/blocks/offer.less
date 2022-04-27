@@ -1,15 +1,46 @@
 .offer__gift {
-  padding: 35px 0;
+  padding: 32px 0;
+}
+
+.offer__additional-goods {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    top: 41px;
+    left: 0;
+    right: -20px;
+    background-color: @button-bg-color;
+    z-index: -1;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .offer__gift {
-    padding: 69px 0 76px 0;
+    padding: 65px 0 76px 0;
+  }
+
+  .offer__additional-goods {
+    &::before {
+      top: 49px;
+      left: -30px;
+      right: -30px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .offer__gift {
     padding: 0;
+  }
+
+  .offer__additional-goods {
+    &::before {
+      top: 49px;
+      left: -110px;
+      right: -434px;
+    }
   }
 }

@@ -1,32 +1,106 @@
 .form__container {
-  padding: 0 20px;
+  padding: 0 20px 32px 20px;
+}
+
+.form__form-field {
+  padding: 39px 0 21px 0;
 }
 
 .form__text {
   font-size: 14px;
   line-height: 18px;
   margin: 0;
-  margin-bottom: 39px;
+  padding: 0 74px 0 20px;
 }
 
 .form__switch {
-  padding: 22px 0 19px 0;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  border-top: 1px solid @footer-color;
+  padding: 23px 0 19px 0;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    border-top: 1px solid @footer-color;
+    border-bottom: 1px solid @footer-color;
+    height: 100%;
+    z-index: -1;
+    top: -1px;
+  }
+
+  &::before {
+    left: calc(((100vw - 280px) / 2) * -1);
+    width: calc((100vw - 280px) / 2);
+  }
+
+  &::after {
+    right: calc(((100vw - 280px) / 2) * -1);
+    width: calc((100vw - 280px) / 2);
+  }
+}
+
+.form__сontact-details {
+  position: relative;
+  padding: 25px 0 0 0;
+  border-top: 1px solid @border-menu;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    top: 41px;
+    left: 0;
+    right: -20px;
+    background-color: @button-bg-color;
+    z-index: -1;
+  }
+}
+
+.form__comments {
+  position: relative;
+  padding: 12px 0 0 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    top: 28px;
+    left: 0;
+    right: -20px;
+    background-color: @button-bg-color;
+    z-index: -1;
+  }
 }
 
 .form__extra {
-  margin-bottom: 34px;
+  position: relative;
+  padding: 19px 0 31px 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    top: 35px;
+    left: 0;
+    right: -20px;
+    background-color: @button-bg-color;
+    z-index: -1;
+  }
 }
 
 .form__button {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
   display: block;
   text-align: center;
   box-sizing: border-box;
   min-width: 280px;
   min-height: 40px;
   padding: 7px 44px 7px 44px;
-  margin-bottom: 21px;
+  margin-bottom: 16px;
 }
 
 .form__option {
@@ -40,27 +114,95 @@
 .form__box {
   display: flex;
   flex-direction: column;
+  padding: 0;
 }
 
 @media (min-width: @tablet-width) {
   .form__container {
-    padding: 0 67px 0 71px;
+    padding: 0 67px 0 70px;
     display: flex;
     flex-direction: column;
   }
 
+  .form__text {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0 358px 0 71px;
+  }
+
+  .form__form-field {
+    padding: 63px 0 75px 0;
+  }
+
+  .form__switch {
+    padding: 22px 20px 24px 28px;
+    border: 1px solid @border-color;
+
+    &::before,
+    &::after {
+      border-top: none;
+      border-bottom: none;
+    }
+  }
+
   .form__box {
     flex-direction: row;
+    padding: 0;
+    padding-bottom: 73px;
   }
 
   .form__button {
     min-height: 52px;
     min-width: 282px;
     font-size: 20px;
+    margin-bottom: 0;
+    margin-right: 62px;
+  }
+
+  .form__option {
+    padding-left: 0;
+    padding-top: 10px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .form__сontact-details {
+    padding: 75px 0 33px 0;
+    border-top: none;
+
+    &::before {
+      top: 96px;
+      left: -70px;
+      right: -70px;
+    }
+  }
+
+  .form__comments {
+    padding: 12px 0 12px 0;
+
+    &::before {
+      top: 34px;
+      left: -70px;
+      right: -70px;
+    }
+  }
+
+  .form__extra {
+    padding: 47px 0 30px 0;
+
+    &::before {
+      top: 69px;
+      left: -70px;
+      right: -70px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .form__text {
+    padding: 0 1007px 66px 110px;
+  }
+
   .form__container {
     padding: 0 110px;
     display: flex;
@@ -69,24 +211,59 @@
     justify-content: space-between;
   }
 
+  .form__form-field {
+    padding: 0;
+  }
+
   .form__switch {
-    padding: 22px 0 19px 28px;
+    padding: 0;
     width: 570px;
   }
 
   .form__сontact-details {
     min-width: 1220px;
+    padding: 71px 0 33px 0;
+
+    &::before {
+      top: 92px;
+      left: -110px;
+      right: -110px;
+    }
   }
 
   .form__comments {
     min-width: 1220px;
+    padding: 12px 0 0 0;
+
+    &::before {
+      top: 36px;
+      left: -110px;
+      right: -110px;
+    }
   }
 
   .form__extra {
     min-width: 1220px;
+    padding-top: 62px;
+    padding-bottom: 38px;
+
+    &::before {
+      top: 86px;
+      left: -110px;
+      right: -110px;
+    }
   }
 
   .form__button {
     min-width: 568px;
+  }
+
+  .form__option {
+    padding-left: 21px;
+    padding-top: 11px;
+  }
+
+  .form__box {
+    padding-bottom: 79px;
   }
 }

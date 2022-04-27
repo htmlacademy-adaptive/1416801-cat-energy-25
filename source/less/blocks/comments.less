@@ -1,8 +1,17 @@
+.comments__box {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .comments__title {
   .font-style-title();
   font-size: 24px;
   line-height: 26px;
+  margin: 0;
   margin-bottom: 37px;
+  background-color: @main-color;
+  display: inline-block;
+  padding-right: 22px;
 }
 
 .comments__field {
@@ -11,15 +20,20 @@
   font-family: inherit;
   text-transform: uppercase;
   min-width: 280px;
-  padding: 9px 12px 125px 15px;
+  padding: 9px 12px 103px 15px;
   border: 1px solid @border-color;
   box-sizing: border-box;
+  resize: none;
 }
 
 @media (min-width: @tablet-width) {
   .comments__title {
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 77px;
+    margin-left: -39px;
+    padding-left: 39px;
+    padding-right: 39px;
   }
 
   .comments__field {
@@ -27,5 +41,12 @@
     line-height: 30px;
     min-width: 631px;
     min-height: 174px;
+    padding-left: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comments__field {
+    min-width: 1220px;
   }
 }
