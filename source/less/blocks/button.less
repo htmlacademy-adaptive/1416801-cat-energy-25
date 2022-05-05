@@ -4,4 +4,30 @@
   font-family: inherit;
   text-transform: uppercase;
   border: none;
+
+  &:hover {
+    background-color: @hover-button;
+  }
+
+  &:active {
+    background-color: @active-button;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+  }
+
+  &--show-all {
+    background-color: @primary-bg-color;
+    color: @second-text-color;
+  }
+
+  &--show-all:hover {
+    background-color: @catalog-button;
+  }
+
+  &--show-all:active {
+    background-color: @catalog-button;
+    opacity: 0.3;
+  }
 }

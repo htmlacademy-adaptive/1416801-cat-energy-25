@@ -9,24 +9,32 @@
 </head>
 
 <body>
-  <header class="main-header main-header--background">
+  <header class="main-header main-header--background main-header--gradient">
     <div class="main-header__box">
       <div class="main-header__container">
         <div class="main-header__wrapper">
           <a class="main-header__logo-picture" href="#">
-            <img src="img/main-header/logo-mobile.svg" alt="Логотип с котом суперменом" width="33" height="37">
+            <picture>
+              <source media="(min-width: 768px)"
+              srcset="img/img/main-header/logo-tablet@1x.svg 1x, img/main-header/logo-tablet@2x.svg 2x">
+              <img src="img/main-header/logo-mobile@1x.svg" alt="Логотип с котом суперменом" width="33" height="37"
+                srcset="img/main-header/logo-mobile@1x.svg 1x, img/main-header/logo-mobile@2x.svg 2x">
+            </picture>
           </a>
           <a class="main-header__logo-text logo-text" href="#">
-            <img src="img/main-header/logo-text.svg" alt="Логотип" width="101" height="18">
+            <picture>
+              <img src="img/main-header/logo-2@1x.svg" alt="Логотип" width="101" height="18" srcset="img/main-header/logo-2@1x.svg 1x, img/main-header/logo-2@2x.svg 2x">
+            </picture>
           </a>
-          <button class="main-header__toggle main-header__toggle--closed main-header__toggle--nojs" type="button" aria-label="Открыть меню">
+          <button class="main-header__toggle main-header__toggle--closed main-header__toggle--nojs" type="button"
+            aria-label="Открыть меню">
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
-        <nav class="main-header__navigation navigation main-header--closed main-header--nojs">
+        <nav class="main-header__navigation navigation main-header__navigation--closed main-header__navigation--nojs">
           <ul class="navigation__list list">
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--active navigation__link--color-white" href="#"
+              <a class="navigation__link navigation__link--active-color navigation__link--color-white" href="#"
                 aria-label="Перейти на главную страницу">Главная</a>
             </li>
             <li class="navigation__item">
@@ -34,7 +42,8 @@
                 aria-label="Перейти на страницу каталога продукции">Каталог продукции</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--color-white" href="form.html" aria-label="Перейти на страницу подбора программы">Подбор
+              <a class="navigation__link navigation__link--color-white" href="form.html"
+                aria-label="Перейти на страницу подбора программы">Подбор
                 программы</a>
             </li>
           </ul>
@@ -45,8 +54,15 @@
         <div class="advertisement__container">
           <h2 class="advertisement__title title">Функциональное питание для котов</h2>
           <p class="advertisement__description text">Занялся собой? Займись котом!</p>
-          <img class="advertisement__image " src="img/program-selection/index-can-mobile.svg"
-            alt="Еда кет энерджи с курицей" width="280" height="270">
+          <picture>
+            <source media="(min-width: 1440px)"
+              srcset="img/program-selection/index-can-desktop@1x.png 1x, img/program-selection/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/program-selection/index-can-tablet@1x.jpg 1x, img/program-selection/index-can-tablet@2x.jpg 2x">
+            <img class="advertisement__image " src="img/program-selection/index-can-mobile.png"
+              srcset="img/program-selection/index-can-mobile.png 1x, img/program-selection/index-can-mobile@2x.png 2x"
+              alt="Еда кет энерджи с курицей" width="280" height="270">
+          </picture>
           <button class="advertisement__button button" type="button"
             aria-label="Подобрать программу питания для кота">подобрать программу</button>
         </div>
@@ -71,8 +87,8 @@
                 </a>
               </li>
               <li class="program__item">
-                <img class="program__image program__image--set" src="img/program/cat-back-pro.svg" alt="Мускулистая багира" width="67"
-                  height="50">
+                <img class="program__image program__image--set" src="img/program/cat-back-pro.svg"
+                  alt="Мускулистая багира" width="67" height="50">
                 <h2 class="program__title title">Набор массы</h2>
                 <p class="program__text description">Заработать авторитет среди дворовых котов и даже
                   собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
@@ -139,10 +155,20 @@
             </div>
             <div class="example__slider slider">
               <div class="slider__images">
-                <img class="slider__image" src="img/slider/slide-mobile.svg" width="280" height="232"
-                  alt="Кот, до использования программы функционального питания">
-                <img class="slider__image" src="img/slider/slide-mobile.svg" width="280" height="232"
-                  alt="Кот, после использования программы функционального питания">
+                <picture>
+                  <source media="(min-width: 768px)"
+                    srcset="img/slider/cat_tablet@1x.png 1x, img/slider/cat_tablet@2x.png 2x">
+                  <img class="slider__image" src="img/slider/cat-mobile.png" width="280" height="232"
+                    srcset="img/slider/cat-mobile.png 1x, img/slider/cat-mobile@2x.png 2x"
+                    alt="Кот, до использования программы функционального питания">
+                </picture>
+                <picture>
+                  <source media="(min-width: 768px)"
+                    srcset="img/slider/cat_tablet@1x.png 1x, img/slider/cat_tablet@2x.png 2x">
+                  <img class="slider__image" src="img/slider/cat-mobile.png" width="280" height="232"
+                    srcset="img/slider/cat-mobile.png 1x, img/slider/cat-mobile@2x.png 2x"
+                    alt="Кот, до использования программы функционального питания">
+                </picture>
               </div>
               <div class="slider__inner">
                 <p class="slider__controls">
@@ -154,7 +180,7 @@
                     aria-label="Показать фотографию кота до использования программы питания">
                   <span class="slider__button"></span>
                   <input class="visually-hidden" type="radio" id="secondary" name="toggle"
-                  aria-label="Показать фотографию кота после использования программы питания">
+                    aria-label="Показать фотографию кота после использования программы питания">
                   <span class="slider__button slider__button--circle"></span>
                 </p>
               </div>
@@ -198,14 +224,12 @@
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--youtube" href="#"
-              aria-label="Перейти по ссылке на сайт Ютюб">
+            <a class="socials__link socials__link--youtube" href="#" aria-label="Перейти по ссылке на сайт Ютюб">
               <span class="visually-hidden">Ютюб</span>
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--telegram" href="#"
-              aria-label="Перейти по ссылке на сайт в Телеграм">
+            <a class="socials__link socials__link--telegram" href="#" aria-label="Перейти по ссылке на сайт в Телеграм">
               <span class="visually-hidden">Телеграмм</span>
             </a>
           </li>
@@ -216,8 +240,10 @@
           aria-label="Перейти по ссылке на сайт HTML Academy">HTML Academy</a>
         <a class="logo-academy__link logo-academy__link--htmlacademy" href="https://htmlacademy.ru/intensive/adaptive"
           aria-label="Перейти по ссылке на сайт HTML Academy">
-          <svg aria-hidden="true" focusable="false" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#666666"/>
+          <svg class="logo-academy__link--image" aria-hidden="true" focusable="false" width="27" height="34"
+            viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" />
           </svg>
           <span class="visually-hidden">HTML Academy</span>
         </a>

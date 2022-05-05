@@ -10,6 +10,14 @@
 
 .footer__image {
   padding: 0 76px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .footer__logo-academy {
@@ -20,6 +28,20 @@
 
 .footer-logo {
   margin-bottom: 54px;
+}
+
+.logo-academy__link--htmlacademy {
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.logo-academy__link--image {
+  fill: @html-academy;
+
+  &:hover {
+    fill: @button-bg-color;
+  }
 }
 
 .footer__socials {

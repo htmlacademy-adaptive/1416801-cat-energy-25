@@ -4,10 +4,20 @@
 
 .advertisement {
   color: @main-color;
-  background-color: @button-bg-color;
+  // background-color: @button-bg-color;
+  background-image: linear-gradient(@button-bg-color 63%, @main-color 63%);
 
   &--background {
     background: url("../img/advertisement/background-mobile.jpg") no-repeat;
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .advertisement {
+    &--background {
+      background: url("../img/advertisement/background-mobile@2x.jpg") no-repeat;
+      background-size: 320px auto;
+    }
   }
 }
 
@@ -60,16 +70,6 @@
     position: relative;
     min-height: 790px;
     padding: 62px 30px 0 30px;
-
-    &::before {
-      position: absolute;
-      background-image: url("../img/advertisement/index-can-tablet.svg");
-      background-repeat: no-repeat;
-      content: "";
-      height: 609px;
-      width: 709px;
-      top: 263px;
-    }
   }
 
   .advertisement__title {
@@ -85,15 +85,18 @@
     font-size: 20px;
     line-height: 20px;
     text-align: start;
-    margin-bottom: 48px;
+    margin-bottom: 19px;
     padding-left: 89px;
   }
 
   .advertisement__image {
-    display: none;
+    height: 609px;
+    width: 709px;
+    margin-bottom: 0;
   }
 
   .advertisement__button {
+    position: absolute;
     font-size: 20px;
     line-height: 20px;
     display: block;
@@ -103,22 +106,20 @@
     min-height: 54px;
     padding: 14px 26px;
     margin-left: 90px;
+    left: 30px;
+    top: 292px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  // .advertisement {
+  //   background-image: linear-gradient(90deg, @button-bg-color 63%, @main-color 63%);
+  // }
+
   .advertisement__container {
     position: relative;
     padding: 122px 110px 0 110px;
     min-height: 470px;
-
-    &::before {
-      background-image: url("../img/advertisement/index-can-desktop.svg");
-      height: 499px;
-      width: 552px;
-      top: 39px;
-      left: 558px;
-    }
   }
 
   .advertisement__title {
@@ -134,5 +135,15 @@
 
   .advertisement__button {
     margin-left: 80px;
+    left: 110px;
+    top: 353px;
+  }
+
+  .advertisement__image {
+    position: absolute;
+    height: 499px;
+    width: 552px;
+    top: 39px;
+    left: 559px;
   }
 }
