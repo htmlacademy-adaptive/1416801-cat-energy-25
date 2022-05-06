@@ -47,6 +47,15 @@
   display: block;
 }
 
+.switch__control-mark:hover {
+  border: 1px solid @hover-swith;
+}
+
+.switch__input:disabled + .switch__control-mark,
+.switch__input:disabled ~ .switch__control-label {
+  opacity: 0.3;
+}
+
 @media (min-width: @tablet-width) {
   .switch__control-mark {
     width: 40px;

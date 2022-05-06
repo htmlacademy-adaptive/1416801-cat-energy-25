@@ -55,10 +55,19 @@
     background: url("../img/extra/checkbox.png") no-repeat;
     display: none;
   }
+
+  &:hover {
+    border: 1px solid @hover-swith;
+  }
 }
 
 .extra__input:checked + .extra__control-mark::before {
   display: block;
+}
+
+.extra__input:disabled + .extra__control-mark,
+.extra__input:disabled ~ .extra__control-label {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {

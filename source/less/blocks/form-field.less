@@ -25,6 +25,23 @@
   height: 45px;
 }
 
+.form-field__input:hover {
+  border: 1px solid @radio-button-color;
+}
+
+.form-field__input:focus {
+  outline: 2px solid @second-text-color;
+  border: none;
+}
+
+.form-field__input:disabled {
+  background-color: @border-color;
+}
+
+.form-field__input--error {
+  outline: 2px solid @error-form;
+}
+
 .form-field__input--size-large {
   min-width: 229px;
 }
@@ -51,7 +68,7 @@
     font-family: inherit;
     padding: 13px 19px 12px 18px;
     display: block;
-    border: 1px solid @border-color;
+    // border: 1px solid @border-color;
     box-sizing: border-box;
     height: 52px;
   }

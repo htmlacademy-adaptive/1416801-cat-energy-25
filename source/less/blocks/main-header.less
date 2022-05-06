@@ -18,6 +18,24 @@
   align-items: center;
   padding: 13px 20px 13px 20px;
   box-sizing: border-box;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-header__logo {
+  width: 33px;
+  height: 37px;
+}
+
+.main-header__logo-2 {
+  width: 101px;
+  height: 18px;
 }
 
 .main-header__toggle {
@@ -39,6 +57,7 @@
   width: 100%;
   top: 65px;
   display: none;
+  z-index: 100;
 }
 
 .main-header__toggle--closed::before {
@@ -74,21 +93,34 @@
   }
 }
 
-.main-header--closed {
+// .main-header--closed {
+//   display: none;
+// }
+.main-header__navigation--closed {
   display: none;
 }
 
-.main-header--opened {
+.main-header__navigation--opened {
   display: block;
 }
+// .main-header--opened {
+//   display: block;
+// }
 
-.main-header--nojs {
+.main-header__navigation--nojs {
   position: static;
   background-color: @main-color;
   width: 100%;
   top: 65px;
   display: block;
 }
+// .main-header--nojs {
+//   position: static;
+//   background-color: @main-color;
+//   width: 100%;
+//   top: 65px;
+//   display: block;
+// }
 
 .main-header__toggle--nojs {
   display: none;
@@ -122,6 +154,7 @@
     height: 78px;
     align-items: center;
     justify-content: space-between;
+    padding: 36px 0 10px 0;
     width: 180px;
   }
 
@@ -133,7 +166,23 @@
     padding-top: 36px;
   }
 
-  .main-header--closed {
+  .main-header__logo-picture {
+    margin-right: 0;
+  }
+
+  .main-header__logo {
+    width: 174px;
+    height: 52px;
+  }
+
+  .main-header__logo-2 {
+    display: none;
+  }
+
+  // .main-header--closed {
+  //   display: block;
+  // }
+  .main-header__navigation--closed {
     display: block;
   }
 
@@ -153,12 +202,33 @@
     padding: 0 110px;
   }
 
+  .main-header__wrapper {
+    padding: 85px 0 10px 0;
+    width: 210px;
+  }
+
+  .main-header--gradient {
+    background-image: linear-gradient(90deg, @main-color 50%, @button-bg-color 50%);
+  }
+
   .main-header--background {
     background: url("../img/main-header/background-desktop.jpg") no-repeat right top;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .main-header--background {
+      background: url("../img/main-header/background-desktop@2x.jpg") no-repeat right top;
+      background-size: 720px auto;
+    }
   }
 
   .main-header__navigation {
     width: 478px;
     padding-top: 66px;
+  }
+
+  .main-header__logo {
+    width: 202px;
+    height: 59px;
   }
 }
