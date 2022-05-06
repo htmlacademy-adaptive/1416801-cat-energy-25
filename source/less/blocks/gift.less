@@ -27,11 +27,25 @@
   min-height: 290px;
 }
 
+@media (min-resolution: 2dppx) {
+  .gift__wrapper {
+    background: url("../img/gift/gift-backgroud@2x.jpg") no-repeat;
+    background-size: 280px auto;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .gift__wrapper {
     min-height: 200px;
     width: 707px;
     background: url("../img/gift/gift-background-tablet.jpg") no-repeat;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .gift__wrapper {
+      background: url("../img/gift/gift-background-tablet@2x.jpg") no-repeat;
+      background-size: 707px auto;
+    }
   }
 
   .gift__text {
@@ -50,6 +64,13 @@
     background-color: @wrapper;
     width: 245px;
     min-height: 290px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .gift__wrapper {
+      background: url("../img/gift/gift-backgroud@2x.jpg") no-repeat;
+      background-size: auto 290px;
+    }
   }
 
   .gift__text {
