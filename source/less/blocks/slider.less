@@ -10,12 +10,6 @@
   float: left;
 }
 
-// @media (min-resolution: 2dppx) {
-//   .slider__image {
-//     display: block;
-//   }
-// }
-
 .slider__inner {
   position: relative;
 }
@@ -42,6 +36,14 @@
 .slider__label {
   font-size: 16px;
   line-height: 20px;
+  margin-right: 118px;
+  // width: 40px;
+  // height: 30px;
+  overflow: hidden;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .slider__button {
@@ -77,25 +79,25 @@
     border: 1px solid @radio-button-color;
     box-sizing: border-box;
     filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
-  }
 
-  .slider__button:hover {
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
-  }
+    &:hover {
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+    }
 
-  .slider__button:active {
-    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
-    border: 1px solid @button-bg-color;
-  }
+    &:active {
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+      border: 1px solid @button-bg-color;
+    }
 
-  .slider__button--circle {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background-color: @button-bg-color;
-    border-radius: 50%;
-    top: -2px;
-    left: 209px;
+    &--circle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: @button-bg-color;
+      border-radius: 50%;
+      top: -2px;
+      left: 209px;
+    }
   }
 
   .slider__switch {
@@ -115,14 +117,15 @@
     font-size: 20px;
     line-height: 30px;
     border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
-  }
+    margin-right: 465px;
 
-  .slider__label:hover {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  }
+    &:hover {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    }
 
-  .slider__label:active {
-    border-bottom: none;
+    &:active {
+      border-bottom: none;
+    }
   }
 }
 
@@ -132,8 +135,6 @@
   }
 
   .slider__image {
-    // height: 511px;
-    // width: 592px;
     padding: 0;
     margin-right: 70px;
     margin-left: 20px;
@@ -167,15 +168,15 @@
     left: 196px;
     border: 1px solid @radio-button-color;
     box-sizing: border-box;
-  }
 
-  .slider__button--circle {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background-color: @button-bg-color;
-    border-radius: 50%;
-    top: -2px;
-    left: 209px;
+    &--circle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: @button-bg-color;
+      border-radius: 50%;
+      top: -2px;
+      left: 209px;
+    }
   }
 }

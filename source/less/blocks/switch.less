@@ -7,10 +7,10 @@
   position: relative;
   margin-bottom: 13px;
   display: block;
-}
 
-.switch__text:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .switch__control-label {
@@ -41,14 +41,14 @@
     background-color: @button-bg-color;
     display: none;
   }
+
+  &:hover {
+    border: 1px solid @hover-swith;
+  }
 }
 
 .switch__input:checked + .switch__control-mark::before {
   display: block;
-}
-
-.switch__control-mark:hover {
-  border: 1px solid @hover-swith;
 }
 
 .switch__input:disabled + .switch__control-mark,
