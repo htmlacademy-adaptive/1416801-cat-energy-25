@@ -1,6 +1,5 @@
 .example__wrapper {
   min-width: 280px;
-  // background-color: @secondary-bg-color;
   padding: 24px 20px 40px 20px;
 }
 
@@ -51,11 +50,6 @@
     top: -14px;
     left: 0;
   }
-
-  // &--position {
-  //   flex-direction: row;
-  //   justify-content: center;
-  // }
 }
 
 .example__cost {
@@ -67,12 +61,15 @@
   }
 }
 
-.example__weight {
-  margin-bottom: 10px;
-}
-
+.example__weight,
 .example__time {
   margin-bottom: 10px;
+  display: block;
+  padding: 0 10px;
+  width: 104px;
+  text-align: center;
+  overflow: hidden;
+  height: 24px;
 }
 
 .example__decline,
@@ -105,7 +102,6 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    // background-color: @secondary-bg-color;
   }
 
   .example__container {
@@ -133,12 +129,6 @@
       top: -14px;
       left: 0;
     }
-
-    // &--position {
-    //   flex-direction: column;
-    //   align-items: flex-end;
-    //   justify-content: start;
-    // }
   }
 
   .example__cost {
@@ -149,12 +139,13 @@
     }
   }
 
+  .example__weight,
+  .example__time {
+    width: 142px;
+    height: 37px;
+  }
+
   .example__title {
-    // font-size: 60px;
-    // line-height: 60px;
-    // margin: 0;
-    // padding: 43px 30px 66px 30px;
-    // background-color: @main-color;
     font-size: 60px;
     line-height: 60px;
     margin: 0;
@@ -164,7 +155,6 @@
 
   .example__box {
     padding: 0 30px 0 30px;
-    // background-color: @main-color;
   }
 
   .example__text {
@@ -209,12 +199,6 @@
   }
 
   .example__box {
-    // // width: 36%;
-    // padding: 71px 61px 69px 110px;
-    // // padding: 0;
-    // // background-color: @primary-bg-color;
-    // background-color: transparent;
-    // grid-area: text;
     padding: 71px 61px 69px 110px;
     background-color: transparent;
     grid-area: text;
@@ -242,14 +226,6 @@
     margin-bottom: 0;
   }
 
-  // .example__option {
-  //   &--position {
-  //     flex-direction: row;
-  //     align-items: center;
-  //     justify-content: center;
-  //   }
-  // }
-
   .example__cost {
     display: block;
 
@@ -270,14 +246,8 @@
   }
 
   .example__slider {
-    // padding: 0;
-    // // width: 52%;
-    // // background-color: @primary-bg-color;
-    // background-color: transparent;
-    // grid-area: image;
     padding: 0;
     background-color: transparent;
     grid-area: image;
-    // max-height: 641px;
   }
 }

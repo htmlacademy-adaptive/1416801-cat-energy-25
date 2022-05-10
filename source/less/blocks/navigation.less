@@ -40,87 +40,87 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-  }
 
-  .navigation__link:hover {
-    opacity: 0.6;
-  }
-
-  .navigation__link:active {
-    opacity: 0.3;
-  }
-
-  .navigation__link--active-color {
-    position: relative;
-
-    &::before {
-      position: absolute;
-      content: "";
-      width: auto;
-      height: 2px;
-      border-bottom: 2px solid @button-bg-color;
-      left: 0;
-      right: 0;
-      bottom: -8px;
+    &:hover {
+      opacity: 0.6;
     }
-  }
 
-  .navigation__link--active-color:hover {
-    opacity: 0.6;
-
-    &::before {
-      border-bottom: none;
+    &:active {
+      opacity: 0.3;
     }
-  }
 
-  .navigation__link--active-color:active {
-    opacity: 0.3;
-  }
+    &--active-color {
+      position: relative;
 
-  .navigation__link--active {
-    position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        width: auto;
+        height: 2px;
+        border-bottom: 2px solid @button-bg-color;
+        left: 0;
+        right: 0;
+        bottom: -8px;
+      }
 
-    &::before {
-      position: absolute;
-      content: "";
-      width: auto;
-      height: 2px;
-      border-bottom: 2px solid @button-bg-color;
-      left: 0;
-      right: 0;
-      bottom: -8px;
+      &:hover {
+        opacity: 0.6;
+
+        &::before {
+          border-bottom: none;
+        }
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
     }
-  }
 
-  .navigation__link--active:hover {
-    opacity: 0.6;
+    &--active {
+      position: relative;
 
-    &::before {
-      border-bottom: none;
+      &::before {
+        position: absolute;
+        content: "";
+        width: auto;
+        height: 2px;
+        border-bottom: 2px solid @button-bg-color;
+        left: 0;
+        right: 0;
+        bottom: -8px;
+      }
+
+      &:hover {
+        opacity: 0.6;
+
+        &::before {
+          border-bottom: none;
+        }
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
     }
-  }
-
-  .navigation__link--active:active {
-    opacity: 0.3;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .navigation__link--color-white {
-    color: @main-color;
-  }
-
   .navigation__link {
     font-size: 20px;
     line-height: 30px;
-  }
 
-  .navigation__link--active-color {
-    position: relative;
+    &--color-white {
+      color: @main-color;
+    }
 
-    &::before {
-      border-bottom: 2px solid @main-color;
-      bottom: -9px;
+    &--active-color {
+      position: relative;
+
+      &::before {
+        border-bottom: 2px solid @main-color;
+        bottom: -9px;
+      }
     }
   }
 }

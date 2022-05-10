@@ -3,10 +3,10 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
-}
 
-.form-field__wrapper:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form-field__label {
@@ -23,37 +23,36 @@
   border: 1px solid @border-color;
   box-sizing: border-box;
   height: 45px;
-}
 
-.form-field__input:hover {
-  border: 1px solid @radio-button-color;
-}
+  &:hover {
+    border: 1px solid @radio-button-color;
+  }
 
-.form-field__input:focus {
-  outline: 2px solid @second-text-color;
-  border: none;
-}
+  &:focus {
+    outline: 2px solid @second-text-color;
+    border: none;
+  }
 
-.form-field__input:disabled {
-  background-color: @border-color;
-}
+  &:disabled {
+    background-color: @border-color;
+  }
 
-.form-field__input--error {
-  outline: 2px solid @error-form;
-}
+  &--error {
+    outline: 2px solid @error-form;
+  }
 
-.form-field__input--size-large {
-  min-width: 229px;
-}
+  &--size-large {
+    min-width: 229px;
+  }
 
-.form-field__input--size-medium {
-  min-width: 204px;
-}
+  &--size-medium {
+    min-width: 204px;
+  }
 
-.form-field__input--size-small {
-  min-width: 172px;
+  &--size-small {
+    min-width: 172px;
+  }
 }
-
 
 @media (min-width: @tablet-width) {
   .form-field__wrapper {
@@ -68,38 +67,37 @@
     font-family: inherit;
     padding: 13px 19px 12px 18px;
     display: block;
-    // border: 1px solid @border-color;
     box-sizing: border-box;
     height: 52px;
-  }
 
-  .form-field__input--size-large {
-    min-width: 567px;
-  }
+    &--size-large {
+      min-width: 567px;
+    }
 
-  .form-field__input--size-medium {
-    min-width: 536px;
-  }
+    &--size-medium {
+      min-width: 536px;
+    }
 
-  .form-field__input--size-small {
-    min-width: 497px;
+    &--size-small {
+      min-width: 497px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .form-field__input {
     margin-left: 17px;
-  }
 
-  .form-field__input--size-large {
-    min-width: 506px;
-  }
+    &--size-large {
+      min-width: 506px;
+    }
 
-  .form-field__input--size-medium {
-    min-width: 475px;
-  }
+    &--size-medium {
+      min-width: 475px;
+    }
 
-  .form-field__input--size-small {
-    min-width: 436px;
+    &--size-small {
+      min-width: 436px;
+    }
   }
 }
