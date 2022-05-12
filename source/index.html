@@ -8,7 +8,7 @@
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon.ico">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -180,6 +180,10 @@
             <div class="example__slider slider">
               <div class="slider__images">
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/slider/cat_tablet@1x.webp 1x, img/slider/cat_tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/slider/cat-mobile.webp 1x, img/slider/cat-mobile@2x.webp 2x">
                   <source media="(min-width: 768px)"
                     srcset="img/slider/cat_tablet@1x.png 1x, img/slider/cat_tablet@2x.png 2x">
                   <img class="slider__image" src="img/slider/cat-mobile.png" width="280" height="232"
@@ -187,6 +191,10 @@
                     alt="Кот, до использования программы функционального питания">
                 </picture>
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/slider/cat_tablet@1x.webp 1x, img/slider/cat_tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/slider/cat-mobile.webp 1x, img/slider/cat-mobile@2x.webp 2x">
                   <source media="(min-width: 768px)"
                     srcset="img/slider/cat_tablet@1x.png 1x, img/slider/cat_tablet@2x.png 2x">
                   <img class="slider__image" src="img/slider/cat-mobile.png" width="280" height="232"
